@@ -106,3 +106,32 @@ div.movie-desc:after{
  /* bg color = bg color under block */
  background: white;
 }
+.movie-details-text{
+ color: #4a4a4a;
+ font-weight: 600;
+}
+/*Movie details */
+.movieDetailsContainer{
+ padding: 8px;
+ margin-top: 10px;
+}
+.movie-thumb{
+ float: left;
+   width: 100px;
+   height: 20px;
+   margin-right: 8px;
+   background-color: linen;
+}
+.movie-info-container{
+ margin-left: 510px;
+}
+.movie-info-title{
+ font-weight: 700;
+ color: #4a4a4a;
+}
+.movie-info-rating{
+ color: #9b9b9b
+}
+.movie-info-row{
+ margin:20px;
+}

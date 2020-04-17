@@ -8,13 +8,18 @@ class Landing extends Component {
   componentDidMount(){
     this.props.fetchMovies();
   }
+  handleSubmit =(e)=>{
+       if(e.keyCode===13){
+           this.props.searchMovie(e.target.value);
+       }
+   }
   render() {
        const movies = this.props.results.map(function(item){
            return <MovieCard id={item.id} key={item.id} title={item.title} path={'https://image.tmdb.org/t/p/w500/'+item.poster_path} rating={item.vote_average} overview={item.overview}/>
        })
        return (
            <div className="container">
-               <SearchBar />
+               <SearchBar handleSubmit={this.handleSubmit}/>
                <div className="moviesContainer">{movies}</div>
            </div>
        )
