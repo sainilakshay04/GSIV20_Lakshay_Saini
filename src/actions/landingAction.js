@@ -10,3 +10,13 @@ export function fetchMovies() {
        })
    }
 }
+export function searchMovie(movieQuery) {
+   return function (dispatch) {
+       axios.get('https://api.themoviedb.org/3/search/movie?api_key='+apiKey+'&language=en-US&query='+movieQuery+'&page=1&include_adult=false')
+       .then((response) => {
+           dispatch({ type: "FETCH_MOVIES",
+               payload: response.data.results
+           })
+       })
+   }
+}

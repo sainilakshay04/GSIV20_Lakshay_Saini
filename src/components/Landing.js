@@ -1,6 +1,6 @@
 import React,{Component} from 'react'
 import SearchBar from './SearchBar'
-import {fetchMovies} from '../actions/landingAction'
+import {fetchMovies, searchMovie} from '../actions/landingAction'
 import MovieCard from './MovieCard'
 import {connect} from 'react-redux'
 
@@ -31,4 +31,4 @@ class Landing extends Component {
 const mapStateToProps = store => ({
    results:store.landing.results
 });
-export default connect(mapStateToProps, { fetchMovies })(Landing);
+export default connect(mapStateToProps, { fetchMovies, searchMovie })(Landing);
